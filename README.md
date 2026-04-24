@@ -39,7 +39,8 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/f
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 ```
 
-``` llama cpp 启动服务
+```bash
+# llama cpp 启动服务
 CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
   --model unsloth/Qwen3.6-35B-A3B-GGUF/Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf \
@@ -57,7 +58,8 @@ CUDA_VISIBLE_DEVICES=0 \
 ```
 
 
-``` openclaw 配置
+```json
+# openclaw 配置
 "models": {
     "providers": {
       "llamacpp": {
@@ -77,4 +79,11 @@ CUDA_VISIBLE_DEVICES=0 \
       }
     }
   },
+```
+
+``` bash
+# 下载模型
+hf download unsloth/Qwen3.6-35B-A3B-GGUF \
+  --local-dir ./unsloth/Qwen3.6-35B-A3B-GGUF \
+  --include "Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf"
 ```
