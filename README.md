@@ -84,11 +84,12 @@ CUDA_VISIBLE_DEVICES=0 \
   --main-gpu 0 \
   --n-gpu-layers 0 \
   --mmproj-offload
+  # --mmproj-offload : offload 到 backend 这是 gpu
 
 # Qwen3-ASR-1.7B CPU
 CUDA_VISIBLE_DEVICES="" \
 GGML_VK_VISIBLE_DEVICES="" \
-  llama-server \
+  ~/llama.cpp/build/bin/llama-server \
   --model ggml-org/Qwen3-ASR-1.7B-GGUF/Qwen3-ASR-1.7B-Q8_0.gguf \
   --mmproj ggml-org/Qwen3-ASR-1.7B-GGUF/mmproj-Qwen3-ASR-1.7B-bf16.gguf \
   --ctx-size 1024 \
