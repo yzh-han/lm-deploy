@@ -1,5 +1,19 @@
 # lm-deploy
 
+## cuda toolkit and llama.cpp安装
+
+```bash
+# cuda toolkit
+wget https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run
+sudo sh cuda_12.4.1_550.54.15_linux.run
+
+# llama.cpp
+# clone: https://github.com/ggml-org/llama.cpp
+cmake -B build -DGGML_CUDA=ON
+cmake --build build --config Release
+```
+或者通过 conda
+
 ``` bash
 # 安装 Miniconda
 wget https://anaconda.com
