@@ -1,30 +1,5 @@
 # Example
 
-## Opneclaw.json
-
-```json5
-# openclaw 配置
-"models": {
-    "providers": {
-      "llamacpp": {
-        "baseUrl": "http://127.0.0.1:8001/v1",
-        "apiKey": "no-key",
-        "api": "openai-completions",
-        "models": [
-          {
-            "id": "unsloth/Qwen3.6-35B-A3B",
-            "name": "Qwen",
-            "api": "openai-completions",
-            "reasoning": true,
-            "contextWindow": 131072,
-            "maxTokens": 8192
-          }
-        ]
-      }
-    }
-  },
-```
-
 ## Using OpenAI SDK
 
 ### Qwen3.6-35B-A3B
@@ -80,5 +55,30 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+```
+
+## Opneclaw.json
+
+```json5
+# openclaw 配置
+"models": {
+    "providers": {
+      "llamacpp": {
+        "baseUrl": "http://127.0.0.1:8001/v1",
+        "apiKey": "no-key",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "unsloth/Qwen3.6-35B-A3B",
+            "name": "Qwen",
+            "api": "openai-completions",
+            "reasoning": true,
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
 ```
 
