@@ -41,6 +41,7 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 
 ```bash
 # llama cpp 启动服务
+# Qwen3.6-35B-A3B
 CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
   --model unsloth/Qwen3.6-35B-A3B-GGUF/Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf \
@@ -48,11 +49,21 @@ CUDA_VISIBLE_DEVICES=0 \
   --alias "unsloth/Qwen3.6-35B-A3B" \
   --temp 0.6 \
   --top-p 0.95 \
-  --ctx-size 163840 \
+  --ctx-size 131072 \ # 131072 163840
   --top-k 20 \
   --min-p 0.00 \
   --port 8001 \
-  --parallel 2 \
+  --parallel 1 \
+  --split-mode none \
+  --main-gpu 0
+
+# Qwen3-ASR-1.7B
+CUDA_VISIBLE_DEVICES=0 \
+  ~/llama.cpp/build/bin/llama-server \
+  --model ggml-org/Qwen3-ASR-1.7B-GGUF/Qwen3-ASR-1.7B-Q8_0.gguf \
+  --mmproj ggml-org/Qwen3-ASR-1.7B-GGUF/mmproj-Qwen3-ASR-1.7B-Q8_0.gguf \
+  --ctx-size 2048 \
+  --port 8002 \
   --split-mode none \
   --main-gpu 0
 ```
@@ -86,4 +97,10 @@ CUDA_VISIBLE_DEVICES=0 \
 hf download unsloth/Qwen3.6-35B-A3B-GGUF \
   --local-dir ./unsloth/Qwen3.6-35B-A3B-GGUF \
   --include "Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf" # and mmproj*
+
+HF_ENDPOINT=https://hf-mirror.com\
+  hf download ggml-org/Qwen3-ASR-1.7B-GGUF \
+  --local-dir ./ggml-org/Qwen3-ASR-1.7B-GGUF \
+  --include "Qwen3-ASR-1.7B-Q8_0.gguf" \
+  --include "mmproj-Qwen3-ASR-1.7B-Q8_0.gguf"
 ```
