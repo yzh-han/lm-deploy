@@ -6,7 +6,7 @@
 ```python
 import json
 openai_client = OpenAI(
-    base_url = "http://127.0.0.1:8001/v1",
+    base_url = "http://127.0.0.1:19395/v1",
     api_key = "sk-no-key-required",
 )
 completion = openai_client.chat.completions.create(
@@ -25,7 +25,7 @@ from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
-    base_url="http://localhost:8002/v1",
+    base_url="http://localhost:19396/v1",
     api_key="EMPTY"
 )
 
@@ -64,7 +64,7 @@ print(response.choices[0].message.content)
 "models": {
     "providers": {
       "llamacpp": {
-        "baseUrl": "http://127.0.0.1:8001/v1",
+        "baseUrl": "http://127.0.0.1:19396/v1",
         "apiKey": "no-key",
         "api": "openai-completions",
         "models": [
@@ -73,7 +73,7 @@ print(response.choices[0].message.content)
             "name": "Qwen",
             "api": "openai-completions",
             "reasoning": true,
-            "contextWindow": 131072,
+            "contextWindow": 98304,
             "maxTokens": 8192
           }
         ]
