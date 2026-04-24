@@ -58,7 +58,7 @@ CUDA_VISIBLE_DEVICES=0 \
 ```
 
 
-```json
+```json5
 # openclaw 配置
 "models": {
     "providers": {
