@@ -85,5 +85,5 @@ CUDA_VISIBLE_DEVICES=0 \
 # 下载模型
 hf download unsloth/Qwen3.6-35B-A3B-GGUF \
   --local-dir ./unsloth/Qwen3.6-35B-A3B-GGUF \
-  --include "Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf"
+  --include "Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf" # and mmproj*
 ```
