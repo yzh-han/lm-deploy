@@ -9,8 +9,11 @@ Note:
 
 ### Qwen3.6-35B-A3B
 ```python
+from openai import OpenAI
 import json
 openai_client = OpenAI(
+    # base_url = "http://127.0.0.1:8001/v1",
+    # api_key = "sk-no-key-required",
     base_url = "http://js1.blockelite.cn:19395/v1",
     api_key = "sk-no-key-required",
 )
@@ -30,6 +33,7 @@ from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
+    # base_url="http://localhost:8002/v1",
     base_url = "http://js1.blockelite.cn:19396/v1",
     api_key="EMPTY"
 )
