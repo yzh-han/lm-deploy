@@ -5,6 +5,8 @@ Note:
 剩下的显存放不下 ASR-1.7B了, 因此ASR-1.7B 放在了CPU上, 因此可能会慢,
 可以尝试部署到自己的电脑上， 大概需要 显存 3352MB
 
+**OpenAI API 兼容格式访问:**
+
 ```
 # Qwen3.6-35B-A3B
 base_url = "http://js1.blockelite.cn:19395/v1",
