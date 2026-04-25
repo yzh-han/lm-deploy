@@ -135,4 +135,10 @@ HF_ENDPOINT=https://hf-mirror.com\
   --local-dir ./ggml-org/Qwen3-ASR-1.7B-GGUF \
   --include "Qwen3-ASR-1.7B-Q8_0.gguf" \
   --include "mmproj-Qwen3-ASR-1.7B-bf16.gguf"
+
+HF_ENDPOINT=https://hf-mirror.com\
+  hf download unsloth/Qwen3.6-27B-GGUF \
+  --local-dir ./unsloth/Qwen3.6-27B-GGUF \
+  --include "Qwen3.6-27B-UD-Q4_K_XL.gguf" \
+  --include "mmproj-F16.gguf"
 ```
