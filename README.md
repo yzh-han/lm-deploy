@@ -55,6 +55,23 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 
 ```bash
 # llama cpp 启动服务
+# Qwen3.6-27B  max-context  # 65536 98304 131072 163840
+CUDA_VISIBLE_DEVICES=0 \
+  ~/llama.cpp/build/bin/llama-server \
+  --model unsloth/Qwen3.6-27B-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf \
+  --mmproj unsloth/Qwen3.6-27B-GGUF/mmproj-F16.gguf \
+  --alias "unsloth/Qwen3.6-27B" \
+  --temp 0.6 \
+  --top-p 0.95 \
+  --ctx-size 65536 \
+  --top-k 20 \
+  --min-p 0.00 \
+  --host 0.0.0.0 \
+  --port 8801 \
+  --parallel 2 \
+  --split-mode none \
+  --main-gpu 0
+
 # Qwen3.6-35B-A3B  max-context  # 131072 163840
 CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
@@ -63,14 +80,16 @@ CUDA_VISIBLE_DEVICES=0 \
   --alias "unsloth/Qwen3.6-35B-A3B" \
   --temp 0.6 \
   --top-p 0.95 \
-  --ctx-size 98304 \
+  --ctx-size 131072 \
   --top-k 20 \
   --min-p 0.00 \
   --host 0.0.0.0 \
   --port 8801 \
-  --parallel 2 \
+  --parallel 1 \
   --split-mode none \
-  --main-gpu 0
+  --main-gpu 0 \
+  --n-gpu-layers 99\ 
+  --mmproj-offload
 
 # Qwen3-ASR-1.7B
 CUDA_VISIBLE_DEVICES=0 \
