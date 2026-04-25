@@ -5,6 +5,13 @@ Note:
 剩下的显存放不下 ASR-1.7B了, 因此ASR-1.7B 放在了CPU上, 因此可能会慢,
 可以尝试部署到自己的电脑上， 大概需要 显存 3352MB
 
+```
+# Qwen3.6-35B-A3B
+base_url = "http://js1.blockelite.cn:19395/v1",
+
+# Qwen3-ASR-1.7B
+base_url = "http://js1.blockelite.cn:19396/v1"
+```
 ## Using OpenAI SDK
 
 ### Qwen3.6-35B-A3B
@@ -12,8 +19,6 @@ Note:
 from openai import OpenAI
 import json
 openai_client = OpenAI(
-    # base_url = "http://127.0.0.1:8001/v1",
-    # api_key = "sk-no-key-required",
     base_url = "http://js1.blockelite.cn:19395/v1",
     api_key = "EMPTY",
 )
@@ -33,7 +38,6 @@ from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
-    # base_url="http://localhost:8002/v1",
     base_url = "http://js1.blockelite.cn:19396/v1",
     api_key="EMPTY"
 )
