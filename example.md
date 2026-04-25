@@ -1,12 +1,17 @@
 # Example
 
+Note: 
+硬件使用的是一张24G 的 4090 部署, GPU 上部署了Qwen3.6-35B-A3B, 
+剩下的显存放不下 ASR-1.7B了, 因此ASR-1.7B 放在了CPU上, 因此可能会慢,
+可以尝试部署到自己的电脑上， 大概需要 显存 3352MB
+
 ## Using OpenAI SDK
 
 ### Qwen3.6-35B-A3B
 ```python
 import json
 openai_client = OpenAI(
-    base_url = "http://127.0.0.1:19395/v1",
+    base_url = "http://js1.blockelite.cn:19395/v1",
     api_key = "sk-no-key-required",
 )
 completion = openai_client.chat.completions.create(
@@ -25,7 +30,7 @@ from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
-    base_url="http://localhost:19396/v1",
+    base_url = "http://js1.blockelite.cn:19396/v1",
     api_key="EMPTY"
 )
 
@@ -73,7 +78,7 @@ print(response.choices[0].message.content)
             "name": "Qwen",
             "api": "openai-completions",
             "reasoning": true,
-            "contextWindow": 98304,
+            "contextWindow": 131072,
             "maxTokens": 8192
           }
         ]
