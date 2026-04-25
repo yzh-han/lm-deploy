@@ -30,7 +30,7 @@ from openai import OpenAI
 
 # Initialize client
 client = OpenAI(
-    base_url = "http://js1.blockelite.cn:19395/v1",
+    base_url = "http://js1.blockelite.cn:19396/v1",
     api_key="EMPTY"
 )
 
