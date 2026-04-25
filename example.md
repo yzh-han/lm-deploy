@@ -79,7 +79,7 @@ print(response.choices[0].message.content)
 "models": {
     "providers": {
       "llamacpp": {
-        "baseUrl": "http://127.0.0.1:19396/v1",
+        "baseUrl": "http://js1.blockelite.cn:19395/v1",
         "apiKey": "no-key",
         "api": "openai-completions",
         "models": [
