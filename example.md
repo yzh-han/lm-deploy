@@ -15,7 +15,7 @@ openai_client = OpenAI(
     # base_url = "http://127.0.0.1:8001/v1",
     # api_key = "sk-no-key-required",
     base_url = "http://js1.blockelite.cn:19395/v1",
-    api_key = "sk-no-key-required",
+    api_key = "EMPTY",
 )
 completion = openai_client.chat.completions.create(
     model = "unsloth/Qwen3.6-35B-A3B",
