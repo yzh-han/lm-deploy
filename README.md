@@ -77,10 +77,10 @@ CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
   --model unsloth/Qwen3.6-35B-A3B-GGUF/Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf \
   --mmproj unsloth/Qwen3.6-35B-A3B-GGUF/mmproj-F16.gguf \
-  --alias "unsloth/Qwen3.6-35B-A3B" \
+  --alias "Qwen3.6-35B-A3B" \
   --temp 0.6 \
   --top-p 0.95 \
-  --ctx-size 131072 \
+  --ctx-size 98304 \
   --top-k 20 \
   --min-p 0.00 \
   --host 0.0.0.0 \
@@ -96,6 +96,7 @@ CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
   --model mradermacher/Qwen3-ASR-0.6B-i1-GGUF/Qwen3-ASR-0.6B.i1-Q4_K_M.gguf \
   --mmproj mradermacher/Qwen3-ASR-0.6B-i1-GGUF/Qwen3-ASR-0.6B.mmproj-Q8_0.gguf \
+  --alias "Qwen3-ASR-0.6B" \
   --ctx-size 1024 \
   --host 0.0.0.0 \
   --port 8802 \
