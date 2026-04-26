@@ -167,6 +167,10 @@ HF_ENDPOINT=https://hf-mirror.com\
   hf download mradermacher/Qwen3-ASR-0.6B-i1-GGUF \
   --local-dir ./mradermacher/Qwen3-ASR-0.6B-i1-GGUF \
   --include "Qwen3-ASR-0.6B.i1-Q4_K_M.gguf"
+HF_ENDPOINT=https://hf-mirror.com\
+  hf download mradermacher/Qwen3-ASR-0.6B-GGUF \
+  --local-dir ./mradermacher/Qwen3-ASR-0.6B-i1-GGUF \
+  --include "Qwen3-ASR-0.6B.mmproj-Q8_0.gguf"
 
 HF_ENDPOINT=https://hf-mirror.com\
   hf download ggml-org/Qwen3-ASR-1.7B-GGUF \
