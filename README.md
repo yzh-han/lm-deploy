@@ -98,6 +98,9 @@ CUDA_VISIBLE_DEVICES=0 \
   --ctx-size 1024 \
   --host 0.0.0.0 \
   --port 8802 \
+  --split-mode none \
+  --main-gpu 0 \
+  --n-gpu-layers 99
   # --threads $(nproc) 自动取 CPU 线程数
   # --n-gpu-layers 0 强制不用gpu
 
