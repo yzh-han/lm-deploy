@@ -58,7 +58,7 @@ encoded_string = base64.b64encode(wav_data).decode('utf-8')
 
 # Create multimodal chat completion request
 response = client.chat.completions.create(
-    model="Qwen/Qwen3-ASR-0.6B",
+    model="Qwen3-ASR-0.6B",
     messages=[
         {
             "role": "user",
