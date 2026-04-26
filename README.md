@@ -95,6 +95,7 @@ CUDA_VISIBLE_DEVICES=0 \
 CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
   --model mradermacher/Qwen3-ASR-0.6B-i1-GGUF/Qwen3-ASR-0.6B.i1-Q4_K_M.gguf \
+  --mmproj mradermacher/Qwen3-ASR-0.6B-i1-GGUF/Qwen3-ASR-0.6B.mmproj-Q8_0.gguf \
   --ctx-size 1024 \
   --host 0.0.0.0 \
   --port 8802 \
