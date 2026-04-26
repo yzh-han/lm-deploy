@@ -37,7 +37,7 @@ completion = openai_client.chat.completions.create(
 print(completion.choices[0].message.content)
 ```
 
-### 语音 Qwen3-ASR-1.7B-Q8_0.gguf + mmproj-Qwen3-ASR-1.7B-Q8_0.gguf
+### 语音 Qwen3-ASR-0.6B
 
 ```python
 import base64
@@ -58,7 +58,7 @@ encoded_string = base64.b64encode(wav_data).decode('utf-8')
 
 # Create multimodal chat completion request
 response = client.chat.completions.create(
-    model="Qwen/Qwen3-ASR-1.7B",
+    model="Qwen/Qwen3-ASR-0.6B",
     messages=[
         {
             "role": "user",
