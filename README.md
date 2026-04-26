@@ -92,15 +92,12 @@ CUDA_VISIBLE_DEVICES=0 \
   --mmproj-offload
 
 # Qwen3-ASR-0.6B
-CUDA_VISIBLE_DEVICES="" \
-GGML_VK_VISIBLE_DEVICES="" \
+CUDA_VISIBLE_DEVICES=0 \
   ~/llama.cpp/build/bin/llama-server \
-  --model ggml-org/Qwen3-ASR-1.7B-GGUF/Qwen3-ASR-1.7B-Q8_0.gguf \
-  --mmproj ggml-org/Qwen3-ASR-1.7B-GGUF/mmproj-Qwen3-ASR-1.7B-bf16.gguf \
+  --model mradermacher/Qwen3-ASR-0.6B-i1-GGUF/Qwen3-ASR-0.6B.i1-Q4_K_M.gguf \
   --ctx-size 1024 \
   --host 0.0.0.0 \
   --port 8802 \
-  --threads 12
   # --threads $(nproc) 自动取 CPU 线程数
   # --n-gpu-layers 0 强制不用gpu
 
